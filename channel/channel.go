@@ -24,3 +24,15 @@ func main() {
 	time.Sleep(time.Second)
 	fmt.Println("done")
 }
+
+func say(s string) {
+	for i := 0; i < 5; i++ {
+		time.Sleep(100 * time.Millisecond)
+		fmt.Println(s)
+	}
+}
+
+func main() {
+	go say("world")
+	say("hello")
+}
